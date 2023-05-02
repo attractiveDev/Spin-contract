@@ -10,7 +10,7 @@ describe("Spin contract", function () {
     let hardhatSpin;
     before(async () => {
         const [owner] = await ethers.getSigners();
-        const Spin = await ethers.getContractFactory("Spin");
+        const Spin = await ethers.getContractFactory("Game");
         hardhatSpin = await Spin.deploy(SUPER_ADMIN_ADDRESS);
         await hardhatSpin.deployed();
     })
